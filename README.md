@@ -3,9 +3,9 @@
 # windows系统
 在BAR游戏中，当需要下载地图的时候，就会调用`BAR启动器/bin/pr-downloader`进程。我估计这个文件在windows系统中会有一个.exe后缀。
 
-在linux系统中，我们可以用一个可执行bash脚本或者python脚本替换掉pr-downloader这个可执行的二进制文件，然后在这个脚本中插入我们自己的代码，即用http代理加速地图下载。
+在linux系统中，我们可以用一个可执行bash脚本或者python脚本替换掉`BAR启动器/bin/pr-downloader`这个可执行的二进制文件，然后在这个脚本中插入我们自己的代码。
 
-我不知道在windows系统中，插入一个同名不同后缀的bat文件能不能起到一样的效果，来帮我们插入自己的代码。如果能做到这一点，这个办法就是可行的。
+我不知道在windows系统中，插入一个同名不同后缀的bat文件能不能起到一样的效果。如果能做到这一点，这个办法就是可行的。
 
 # 安装
 1. 在linux系统中，找到`BAR启动器/bin/pr-downloader`，把它重命名为`BAR启动器/bin/pr-downloader-old`。
