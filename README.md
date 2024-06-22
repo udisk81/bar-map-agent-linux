@@ -7,8 +7,8 @@
 
 我不知道在windows系统中，插入一个同名不同后缀的bat文件或是python文件能不能起到一样的效果。如果能做到这一点，这个办法就是可行的。
 
-# 安装
-1. 在linux系统中，找到`BAR启动器/bin/pr-downloader`，把它重命名为`BAR启动器/bin/pr-downloader-old`。
+# 在linux系统中安装
+1. 找到`BAR启动器/bin/pr-downloader`，把它重命名为`BAR启动器/bin/pr-downloader-old`。
 2. 然后把[pr-downloader](pr-downloader)下载到`BAR启动器/bin/`中，这样BAR就会在下载地图的时候执行它。记得要用chmod +x 赋予它可执行权限。
 3. 然后用文本编辑器打开[pr-downloader](pr-downloader)修改其中的`proxy` `path_maps`  `pr_old` 三个变量
 
