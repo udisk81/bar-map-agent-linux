@@ -9,8 +9,8 @@
 
 # 安装
 1. 在linux系统中，找到`BAR启动器/bin/pr-downloader`，把它重命名为`BAR启动器/bin/pr-downloader-old`。
-2. 然后把这个repo中的pr-downloader脚本下载到`BAR启动器/bin/`中，要用chmod +x 赋予它可执行权限。
-3. 然后用文本文件打开pr-downloader脚本修改其中的`proxy` `path_maps`  `pr_old` 三个变量
+2. 然后把[pr-downloader](pr-downloader)下载到`BAR启动器/bin/`中，要用chmod +x 赋予它可执行权限。
+3. 然后用文本编辑器打开[pr-downloader](pr-downloader)修改其中的`proxy` `path_maps`  `pr_old` 三个变量
 
 `proxy`设置为你自己本地使用的http代理。
 
