@@ -16,7 +16,7 @@
 
 `path_maps`设置为`/home/你的用户名/.local/state/Beyond All Reason/maps`，检查确认下你有这个目录。
 
-`pr_old`设置为`BAR启动器/bin/pr-downloader-old`，因为原本的pr-downloader除了下载地图还有其他职责，当我们的脚本发现BAR调用的时候不是为了下载地图，就需要调用原本的pr-downloader进程。
+`pr_old`设置为`BAR启动器/bin/pr-downloader-old`，因为原本的pr-downloader除了下载地图还有其他职责，当我们的脚本发现BAR游戏需要下载的文件不是地图的时候，就需要调用原本的pr-downloader进程来处理。
 
 可以在游戏已经启动的情况下安装或是复原，或是做任意其他改动，无需重启游戏。
 
