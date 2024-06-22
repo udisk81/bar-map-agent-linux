@@ -3,7 +3,7 @@
 # windows系统
 在BAR游戏中，当需要下载地图的时候，就会调用`BAR启动器/bin/pr-downloader`进程。我估计这个文件在windows系统中会有一个.exe后缀。
 
-在linux系统中，我们可以用一个可执行bash脚本或者[pr-downloader](python脚本)替换掉`BAR启动器/bin/pr-downloader`这个可执行的二进制文件，然后在这个脚本中插入我们自己的代码。
+在linux系统中，我们可以用一个可执行bash脚本或者[python脚本](pr-downloader)替换掉`BAR启动器/bin/pr-downloader`这个可执行的二进制文件，然后在这个脚本中插入我们自己的代码。
 
 我不知道在windows系统中，插入一个同名不同后缀的bat文件或是python文件能不能起到一样的效果。如果能做到这一点，这个办法就是可行的。
 
