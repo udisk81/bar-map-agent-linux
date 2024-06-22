@@ -1,4 +1,4 @@
-通过替换BAR游戏的地图下载器pr-downloader，通过http代理加速下载游戏中的地图，这个办法适用linux系统。它是否适用windows系统？请往下读自行判断。
+通过替换BAR游戏的地图下载器pr-downloader，通过你指定的http代理加速下载游戏中的地图，这个办法适用linux系统。它是否适用windows系统？请往下读自行判断。
 
 # windows系统
 在BAR游戏中，当需要下载地图的时候，就会调用`BAR启动器/bin/pr-downloader`进程。我估计这个文件在windows系统中会有一个.exe后缀。
@@ -12,7 +12,7 @@
 2. 然后把[pr-downloader](pr-downloader)下载到`BAR启动器/bin/`中，这样BAR就会在下载地图的时候执行它。记得要用`chmod +x`命令赋予它可执行权限。
 3. 然后用文本编辑器打开[pr-downloader](pr-downloader)修改其中的`proxy` `path_maps`  `pr_old` 三个变量
 
-`proxy`设置为你本地使用的http代理。
+`proxy`设置为你指定的http代理。
 
 `path_maps`设置为`/home/你的用户名/.local/state/Beyond All Reason/maps`，检查确认下你有这个目录。
 
