@@ -1,0 +1,68 @@
+#!/bin/python
+
+#http代理
+proxy = 'http://localhost:8080'
+#bar地图目录
+path_maps = '/opt/game/bar/state/maps'
+#被重命名的原本的pr-downloader
+pr_old = '/opt/game/bar/squashfs-root/bin/pr-downloader-old'
+
+import os
+import glob
+import urllib.request
+import json
+import gzip
+
+import urllib
+import sys
+import subprocess
+
+
+#如果没有download-map参数，调用bar原本的pr-downloader进程
+if '--download-map' not in set(sys.argv):
+    cmds = [pr_old] + list(sys.argv[1:])
+    print(cmds)
+    subprocess.call(cmds)
+    sys.exit()
+
+
+def fetch(url):
+    req = urllib.request.Request(url)
+    req.add_header('user-agent', 'pr-downloader/0.7-752-g613ba1d')
+    return opener.open(req)
+
+
+mapname = ' '.join(sys.argv).split(' --download-map ')[-1]
+mapname = urllib.parse.quote(mapname)
+print('下载地图', mapname)
+
+proxy_handler = urllib.request.ProxyHandler({'https': proxy})
+opener = urllib.request.build_opener(proxy_handler)
+
+u = f'https://files-cdn.beyondallreason.dev/find?category=map&springname={mapname}'
+meta = fetch(u)
+meta = json.load(meta)[0]
+
+filename = meta['filename']
+
+print('md5', meta['md5'])
+hash_ = meta['md5'] + '  ' + filename + '\n'
+hash_ = gzip.compress(hash_.encode())
+with open(path_maps + '/' + filename + '.md5.gz', 'wb') as f:
+    f.write(hash_)
+
+url = meta['mirrors'][0]
+print('下载地址:', url)
+req = fetch(url)
+
+print('文件名:', filename)
+path = path_maps + '/' + filename
+print('保存到:', path)
+#if os.path.exists(path):
+#    print(path, '已经存在')
+#    sys.exit()
+f_out = open(path, 'wb')
+while True:
+    data = req.read(1024 * 16)
+    if len(data) < 1: break
+    f_out.write(data)
