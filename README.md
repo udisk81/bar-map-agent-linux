@@ -16,6 +16,6 @@ proxy是你自己本地使用的http代理。
 
 path_maps的默认地址是：/home/你的用户名/.local/state/Beyond All Reason/maps，检查确认下你有这个目录。
 
-pr_old设置为 launcer/bin/pr-downloader-old 目录，因为原本的pr-downloader除了下载地图还有其他指责，当我们的脚本发现BAR调用的时候不是为了下载地图，就需要调用原本的pr-downloader进程。
+pr_old设置为 launcer/bin/pr-downloader-old，因为原本的pr-downloader除了下载地图还有其他职责，当我们的脚本发现BAR调用的时候不是为了下载地图，就需要调用原本的pr-downloader进程。
 
 
