@@ -1,4 +1,4 @@
-通过替换BAR游戏的地图下载器，来使用http代理加速下载游戏中的地图，这个办法适用linux系统。它是否适用windows系统？请往下读自行判断。
+通过替换BAR游戏的地图下载器pr-downloader，通过http代理加速下载游戏中的地图，这个办法适用linux系统。它是否适用windows系统？请往下读自行判断。
 
 # windows系统
 在BAR游戏中，当需要下载地图的时候，就会调用`BAR启动器/bin/pr-downloader`进程。我估计这个文件在windows系统中会有一个.exe后缀。
