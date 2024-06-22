@@ -10,12 +10,12 @@
 # 安装
 1. 在linux系统中，找到BAR的launcher中的bin/pr-downloader，把它重命名为bin/pr-downloader-old。
 2. 然后把这个repo中的pr-downloader下载，放到bin/目录中，要用chmod +x 赋予它可执行权限。
-3. 然后用文本文件打开pr-downloader，修改其中的proxy, path_maps, pr_old 三个变量
+3. 然后用文本文件打开pr-downloader，修改其中的`proxy` `path_maps`  `pr_old` 三个变量
 
 proxy是你自己本地使用的http代理。
 
-path_maps的默认地址是：/home/你的用户名/.local/state/Beyond All Reason/maps，检查确认下你有这个目录。
+path_maps的默认地址是`/home/你的用户名/.local/state/Beyond All Reason/maps`，检查确认下你有这个目录。
 
-pr_old设置为 launcer/bin/pr-downloader-old，因为原本的pr-downloader除了下载地图还有其他职责，当我们的脚本发现BAR调用的时候不是为了下载地图，就需要调用原本的pr-downloader进程。
+pr_old设置为`BAR启动器/bin/pr-downloader-old`，因为原本的pr-downloader除了下载地图还有其他职责，当我们的脚本发现BAR调用的时候不是为了下载地图，就需要调用原本的pr-downloader进程。
 
 
