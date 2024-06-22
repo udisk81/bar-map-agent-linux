@@ -1,7 +1,7 @@
 使用http代理加速下载游戏BAR的地图，这个办法适用linux系统。它是否适用windows系统？请往下读自行判断。
 
 # windows系统
-在BAR游戏中，当需要下载地图的时候，就会调用launcher的bin/pr-downloader进程。我估计这个文件在windows系统中会有一个.exe后缀。
+在BAR游戏中，当需要下载地图的时候，就会调用`BAR启动器/bin/pr-downloader`进程。我估计这个文件在windows系统中会有一个.exe后缀。
 
 在linux系统中，我们可以用一个可执行bash脚本或者python脚本替换掉pr-downloader这个可执行的二进制文件，然后在这个脚本中插入我们自己的代码，即用http代理加速地图下载。
 
@@ -9,10 +9,10 @@
 
 # 安装
 1. 在linux系统中，找到`BAR启动器/bin/pr-downloader`，把它重命名为`BAR启动器/bin/pr-downloader-old`。
-2. 然后把这个repo中的pr-downloader下载到`BAR启动器/bin/`中，要用chmod +x 赋予它可执行权限。
-3. 然后用文本文件打开pr-downloader，修改其中的`proxy` `path_maps`  `pr_old` 三个变量
+2. 然后把这个repo中的pr-downloader脚本下载到`BAR启动器/bin/`中，要用chmod +x 赋予它可执行权限。
+3. 然后用文本文件打开pr-downloader脚本修改其中的`proxy` `path_maps`  `pr_old` 三个变量
 
-`proxy`是你自己本地使用的http代理。
+`proxy`设置为你自己本地使用的http代理。
 
 `path_maps`设置为`/home/你的用户名/.local/state/Beyond All Reason/maps`，检查确认下你有这个目录。
 
