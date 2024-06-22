@@ -9,7 +9,7 @@
 
 # 安装
 1. 在linux系统中，找到`BAR启动器/bin/pr-downloader`，把它重命名为`BAR启动器/bin/pr-downloader-old`。
-2. 然后把[pr-downloader](pr-downloader)下载到`BAR启动器/bin/`中，要用chmod +x 赋予它可执行权限。
+2. 然后把[pr-downloader](pr-downloader)下载到`BAR启动器/bin/`中，这样BAR就会在下载地图的时候执行它。记得要用chmod +x 赋予它可执行权限。
 3. 然后用文本编辑器打开[pr-downloader](pr-downloader)修改其中的`proxy` `path_maps`  `pr_old` 三个变量
 
 `proxy`设置为你本地使用的http代理。
