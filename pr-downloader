@@ -17,6 +17,8 @@ import urllib
 import sys
 import subprocess
 
+if not os.path.exists(path_maps):
+    os.makedirs(path_maps)
 
 #如果没有download-map参数，调用bar原本的pr-downloader进程
 if '--download-map' not in set(sys.argv):
